@@ -34,7 +34,7 @@ class _PalindromeState extends State<Palindrome> {
                   setState(() {
                     name = controller.text;
                     checkedName.clear();
-                   
+                   if (name.isNotEmpty){
                       for (int i = 0; i < name.length; i++) {
                         checkedName.add(name[i]);
                       }
@@ -44,6 +44,7 @@ class _PalindromeState extends State<Palindrome> {
                     } else {
                       name = "It's not a Palindrome";
                     }
+                   }
                   });
                 },
                 child: const Text("Check")),
